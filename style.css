@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
+
+body {
+    background-color: #3E3054;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    
+}
+
+.title {
+    color: #F9F871;
+}
+
+.mainArea {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2em;
+    height: auto;
+    width: auto;
+}
+
+.controlArea {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#drawArea {
+    display: flex;
+    height: 30em;
+    width: 30em;
+    align-content: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.square {
+ box-sizing: border-box;
+ border: 0.1em solid yellow;
+}
+
+.square:hover {
+    background-color: white;
+}
+
+.sliderArea {
+    display: flex;
+    flex-direction: row;
+    position: static;
+
+}
+.sliderInput {
+    color: #F9F871;
+}
+
+.sliderInput:hover {
+    opacity: 1;
+}
+
+.sliderDesign {
+    color: #F9F871;
+    width: max-content;
+}
+#white {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #ED8568;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+#eraser {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #ED8568;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+#rainbow {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #000;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+#rainbow:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+#rainbow:active {
+    color: white;
+}
+
+#rainbow:active:after {
+    background: transparent;
+}
+
+#rainbow:hover:before {
+    opacity: 1;
+}
+
+#rainbow:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ED8568;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}

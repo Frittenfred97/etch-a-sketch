@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">Etch a sketch</h1>
+    </div>
+    <div class="mainArea">
+        <div class="controlArea">
+            <button id="white">White</button>
+            <Button id="rainbow">Rainbow</Button>
+            <button id="eraser">Eraser</button>
+            <div class="sliderArea">
+                <input type="range" min="1" max="16" value="8" id="sliderInput">
+                <p class="sliderDesign"><span id="sliderOutput"></span></p>
+            </div>
+        </div>
+        <div id="drawArea"></div>
+    </div>
+</body>
+</html>
