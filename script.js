@@ -2,6 +2,7 @@
 let sliderInput = document.getElementById("sliderInput");
 let sliderOutput = document.getElementById("sliderOutput");
 let drawArea = document.getElementById("drawArea");
+let buttonWhite = document.getElementById("white");
 
 
 sliderOutput.textContent = `${sliderInput.value}x${sliderInput.value}`;
@@ -41,3 +42,20 @@ createSquares();
 sliderInput.addEventListener("input", () => {
     createSquares();
 } );
+
+
+function colorWhite() {
+
+    let whiteColor = document.getElementsByClassName("square");
+
+    for (i = 0; i < whiteColor.length; i++) {
+          whiteColor[i].onmouseover = (e) => {
+              e.target.style.backgroundColor = "white";
+          };
+      };
+  };
+
+buttonWhite.addEventListener("click", colorWhite)
+
+
+// add mouseOver CSS Class.
