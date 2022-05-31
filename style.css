@@ -136,6 +136,48 @@ body {
     border-radius: 10px;
 }
 
+#eraser:before {
+    content: '';
+    background: linear-gradient(45deg, #3B4F7A, #3B4F7A, #3B4F7A);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+#eraser:active {
+    color: black;
+}
+
+#eraser:active:after {
+    background: transparent;
+}
+
+#eraser:hover:before {
+    opacity: 1;
+}
+
+#eraser:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ED8568;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
 #rainbow {
     width: 220px;
     height: 50px;
@@ -168,7 +210,7 @@ body {
 }
 
 #rainbow:active {
-    color: white;
+    color: black;
 }
 
 #rainbow:active:after {
